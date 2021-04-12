@@ -1,4 +1,4 @@
-package algos
+package slidingwindow
 
 import "github.com/kaunamohammed/godsa/utilities"
 
@@ -10,7 +10,7 @@ func MaxSequenceWithContiniousOne(arr []int, k int) int {
 	rightPointer := 0
 	maxTotal := 0
 
-	for rightPointer < len(arr) { 
+	for rightPointer < len(arr) {
 
 		if arr[rightPointer] == 0 {
 			zeroCounter++
@@ -19,10 +19,10 @@ func MaxSequenceWithContiniousOne(arr []int, k int) int {
 		for zeroCounter > k {
 			if arr[leftPointer] == 0 {
 				zeroCounter--
-			}			
-			leftPointer++	
+			}
+			leftPointer++
 		}
-		
+
 		rightPointer++
 		maxTotal = utilities.Max(maxTotal, (rightPointer - leftPointer))
 	}

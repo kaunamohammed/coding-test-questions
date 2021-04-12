@@ -1,4 +1,4 @@
-package algos
+package slidingwindow
 
 // LengthOfSmallestSubArrayGivenSum returns the length of the smallest sub array that 
 // adds up to a given sum

@@ -1,4 +1,4 @@
-package algos
+package slidingwindow
 
 // SubArraysWithKDistinct dpes
 func SubArraysWithKDistinct(arr []int, k int) int {

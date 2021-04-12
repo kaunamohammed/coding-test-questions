@@ -1,4 +1,4 @@
-package algos
+package slidingwindow
 
 import "github.com/kaunamohammed/godsa/utilities"
 

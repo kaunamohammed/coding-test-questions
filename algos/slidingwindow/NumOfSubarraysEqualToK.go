@@ -1,4 +1,4 @@
-package algos
+package slidingwindow
 
 
 // Given an array arr, this algorithm finds the total number of subarrays that when summed up equal to k

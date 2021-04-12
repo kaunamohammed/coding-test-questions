@@ -1,7 +1,6 @@
 package algos
 
-
-// AlternatingSort sorts an array of ints by placing the nums element at index 1 in index 1 of a new array 
+// AlternatingSort sorts an array of ints by placing the nums element at index 1 in index 1 of a new array
 // then the element at index lens(nums) - 1, then the element at index 2, then index lens(nums) - 2 and so on
 // until the array has been fully sorted.
 // if the resultong array of the sort is not in ascending order,
@@ -21,7 +20,7 @@ func AlternatingSort(nums []int) (bool, []int) {
 	result[0] = nums[0]
 
 	for i := 1; i < len(nums); i++ {
-		if i % 2 == 0 {
+		if i%2 == 0 {
 			result[i] = nums[leftPointer]
 		} else {
 			result[i] = nums[rightPointer]
@@ -29,8 +28,8 @@ func AlternatingSort(nums []int) (bool, []int) {
 			leftPointer++
 		}
 
-		if result[i] < result[i - 1] {
-			return false, []int { i, i - 1}
+		if result[i] < result[i-1] {
+			return false, []int{i, i - 1}
 		}
 	}
 
