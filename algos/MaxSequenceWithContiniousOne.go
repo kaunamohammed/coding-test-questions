@@ -27,5 +27,5 @@ func MaxSequenceWithContiniousOne(arr []int, k int) int {
 		maxTotal = utilities.Max(maxTotal, (rightPointer - leftPointer))
 	}
 
-	return maxTotal - zeroCounter
+	return maxTotal
 }

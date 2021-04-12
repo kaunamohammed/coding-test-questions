@@ -96,7 +96,7 @@ func TestMaxSequenceWithContiniousOne(t *testing.T) {
 
 	result := algos.MaxSequenceWithContiniousOne([]int {0,1,0,1,0,0,1,1}, 3)
 
-	assert.Equal(t, 4, result)
+	assert.Equal(t, 7, result)
 
 }
 
