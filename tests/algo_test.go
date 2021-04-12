@@ -91,3 +91,19 @@ func TestNumSubArrayProductLessThanK(t *testing.T) {
 	assert.Equal(t, 8, result)
 
 }
+
+func TestMaxSequenceWithContiniousOne(t *testing.T) {
+
+	result := algos.MaxSequenceWithContiniousOne([]int {0,1,0,1,0,0,1,1}, 3)
+
+	assert.Equal(t, 4, result)
+
+}
+
+func TestNumOfSubarraysEqualToK(t *testing.T) {
+
+	result := algos.NumOfSubarraysEqualToK([]int {1,7,4,3,1,2,1,5,1}, 7)
+
+	assert.Equal(t, 4, result)
+
+}
