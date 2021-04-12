@@ -1,17 +1,17 @@
 package algos
 
 // SubArraysWithKDistinct dpes
-func SubArraysWithKDistinct(A []int, K int) int {
+func SubArraysWithKDistinct(arr []int, k int) int {
 	
 	left, counter := 0, 0
 	window := make(map[int]int)
 
-	for right := 0; right < len(A); right++ {
+	for right := 0; right < len(arr); right++ {
 
-		if val, ok := window[A[right]]; ok {
-			window[A[right]] = val + 1
+		if val, ok := window[arr[right]]; ok {
+			window[arr[right]] = val + 1
 		} else {
-			window[A[right]] = 1
+			window[arr[right]] = 1
 		}
 
 		for left < right {
