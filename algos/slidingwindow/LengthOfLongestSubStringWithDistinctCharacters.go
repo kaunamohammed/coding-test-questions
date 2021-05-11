@@ -19,11 +19,9 @@ func LengthOfLongestSubStringWithDistinctCharacters(s string, k int) int {
 		// need to first check if we have the character
 		// and if not, put it inside the hashmap with a value of 1
 		// else increment the number of occurences of the value
-		if val, ok := window[s[rightPointer]]; ok {
-			window[s[rightPointer]] = val + 1
-		} else {
-			window[s[rightPointer]] = 1
-		}
+
+		window[s[rightPointer]] += 1
+
 
 		// while the hashmap contains more than k characters
 		// keep removing the left most character
