@@ -42,9 +42,9 @@ func TestLengthOfLongestSubStringWithoutRepeatingCharacters(t *testing.T) {
 
 }
 
-func TestLengthOfSmallestSubArrayGivenSum(t *testing.T) {
+func TestLengthOfSmallestSubArrayGreaterThanOrEqualToGivenSum(t *testing.T) {
 
-	result := slidingwindow.LengthOfSmallestSubArrayGivenSum(8, []int{4, 2, 2, 7, 8, 1, 2, 8, 1, 0})
+	result := slidingwindow.LengthOfSmallestSubArrayGreaterThanOrEqualToGivenSum(8, []int{1, 2, 3, 4, 5, 6, 7, 8})
 
 	assert.Equal(t, 1, result)
 
@@ -105,4 +105,11 @@ func TestNumOfSubarraysEqualToK(t *testing.T) {
 	result := slidingwindow.NumOfSubarraysEqualToK([]int{1, 7, 4, 3, 1, 2, 1, 5, 1}, 7)
 	assert.Equal(t, 4, result)
 
+}
+
+func TestDistinctElementsCountsInSubArray(t *testing.T) {
+
+	result := slidingwindow.DistinctElementsCountsInSubArray( []int{2, 1, 2, 3, 2, 1, 4, 5}, 5)
+	assert.Equal(t, "3 3 4 5", result)
+	
 }
