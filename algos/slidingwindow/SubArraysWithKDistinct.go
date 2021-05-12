@@ -8,11 +8,7 @@ func SubArraysWithKDistinct(arr []int, k int) int {
 
 	for right := 0; right < len(arr); right++ {
 
-		if val, ok := window[arr[right]]; ok {
-			window[arr[right]] = val + 1
-		} else {
-			window[arr[right]] = 1
-		}
+		window[arr[right]] += 1
 
 		for left < right {
 
@@ -24,9 +20,7 @@ func SubArraysWithKDistinct(arr []int, k int) int {
 
 		}
 
-
 	}
-	
 
 	return counter
 }
