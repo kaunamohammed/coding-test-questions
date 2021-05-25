@@ -11,15 +11,12 @@ func MoveZerosToFront(nums []int) []int {
 
 	for leftPointer >= 0 {
 		if nums[rightPointer] != 0 {
-			leftPointer--
 			rightPointer--
 		} else if nums[rightPointer] == 0 && nums[leftPointer] != 0 {
 			utilities.Swap(nums, leftPointer, rightPointer)
-			leftPointer--
 			rightPointer--
-		} else {
-			leftPointer--
 		}
+		leftPointer--
 	}
 
 	return nums

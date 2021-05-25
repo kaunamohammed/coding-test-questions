@@ -1,12 +1,16 @@
 package slidingwindow
 
-import "github.com/kaunamohammed/godsa/utilities"
+import (
+	"math"
+
+	"github.com/kaunamohammed/godsa/utilities"
+)
 
 // MaxSumSubArray returns the maximum sum of elements in an array given a constraint on the total amount
 // of numbers in a subarray
 func MaxSumSubArray(nums []int, k int) int {
 
-	maxSum := 0
+	maxSum := math.MinInt64
 	currentSum := 0
 	leftPointer := 0
 
